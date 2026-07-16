@@ -152,6 +152,20 @@ class LinkedList {
     removedNode.next = null;
     return removedNode.value;
   }
+  toString() {
+    if (!this.head) return "";
+
+    let result = "";
+    let current = this.head;
+
+    while (current) {
+      result += `( ${current.value} ) -> `;
+      current = current.next;
+    }
+
+    result += "null";
+    return result;
+  }
 }
 
 export { Node, LinkedList };
