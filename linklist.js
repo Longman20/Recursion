@@ -53,13 +53,13 @@ class LinkedList {
     return current ? current.value : undefined;
   }
   pop() {
-    if (!this.head) return undefined; // empty list
-    const removed = this.head; // node to remove
-    this.head = this.head.next; // advance head
-    if (!this.head) this.tail = null; // list became empty
-    this.length--; // update length
-    removed.next = null; // detach node
-    return removed.value; // return removed value
+    if (!this.head) return undefined;
+    const removed = this.head;
+    this.head = this.head.next;
+    if (!this.head) this.tail = null;
+    this.length--;
+    removed.next = null;
+    return removed.value;
   }
   contains(value) {
     let current = this.head;
